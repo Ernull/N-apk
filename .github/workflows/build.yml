@@ -26,6 +26,12 @@ jobs:
       - name: Create Android Structure
         run: flutter create --platforms android --project-name nexus_app .
 
+      # این مرحله جدید است: آپدیت خودکار نسخه کاتلین برای رفع ارور وب‌ویو
+      - name: Fix Kotlin Version
+        run: |
+          sed -i 's/1.7.1/1.9.24/g' android/settings.gradle
+          sed -i 's/1.8.22/1.9.24/g' android/settings.gradle
+
       - name: Install Packages
         run: flutter pub get
 
