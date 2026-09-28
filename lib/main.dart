@@ -70,7 +70,6 @@ class _LoginScreenState extends State<LoginScreen> {
       List<dynamic> cookies = [];
       var sessionData = data['session'];
 
-      // استخراج هوشمند کوکی‌ها از ساختارهای مختلف دیتابیس شما
       if (sessionData is List) {
         cookies = sessionData;
       } else if (sessionData is Map && sessionData['cookies'] is List) {
@@ -101,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
       );
 
     } catch (e) {
-      _showSnackBar("خطا: ارتباط ناموفق بود", isError: true);
+      _showSnackBar("خطا: ارتباط ناموفق بود یا لینک نامعتبر است", isError: true);
     } finally {
       if (mounted) setState(() => _isLoading = false);
     }
