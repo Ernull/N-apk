@@ -1,7 +1,7 @@
 name: Build Android APK
 
 on:
-  workflow_dispatch: # این خط اجازه می‌دهد با زدن دکمه دستی بیلد را شروع کنید
+  workflow_dispatch:
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
           channel: 'stable'
 
       - name: Create Android Structure
-        run: flutter create --platforms android .
+        run: flutter create --platforms android --project-name nexus_app .
 
       - name: Install Packages
         run: flutter pub get
