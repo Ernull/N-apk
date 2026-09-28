@@ -1,5 +1,5 @@
-name: nexus_digikala_app
-description: A secure auto-login WebView application for Digikala.
+name: nexus_app
+description: Auto login secure app
 publish_to: 'none'
 version: 1.0.0+1
 
